@@ -1,11 +1,3 @@
-<!--
-  ~ Copyright (c) 2015-present, Parse, LLC.
-  ~ All rights reserved.
-  ~
-  ~ This source code is licensed under the BSD-style license found in the
-  ~ LICENSE file in the root directory of this source tree. An additional grant
-  ~ of patent rights can be found in the PATENTS file in the same directory.
-  -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
@@ -16,9 +8,61 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity">
 
-    <TextView
-        android:text="@string/hello_world"
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/uberlogo" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/riderOrDriverSwitch"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:text="Driver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/riderOrDriverSwitch"
+        android:layout_toRightOf="@+id/riderOrDriverSwitch"
+        android:layout_toEndOf="@+id/riderOrDriverSwitch"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/textViewDriver"
+        android:textSize="24sp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="40dp"/>
+
+
+    <TextView
+        android:text="Rider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/riderOrDriverSwitch"
+        android:layout_toLeftOf="@+id/riderOrDriverSwitch"
+        android:layout_toStartOf="@+id/riderOrDriverSwitch"
+        android:layout_marginRight="10dp"
+        android:id="@+id/textViewRider"
+        android:textSize="24sp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:text="Get Started"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDriver"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/button"
+        android:onClick="getStarted"
+        android:nestedScrollingEnabled="false" />
 
 </RelativeLayout>
